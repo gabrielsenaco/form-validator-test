@@ -122,10 +122,7 @@ function addValidatorListener (items) {
 
 function addFormValidator (items) {
   form.addEventListener('submit', event => {
-    const canSubmit = items.every(item => {
-      const result = item.validator()
-      return result.success
-    })
+    const canSubmit = items.every(item => item.validator().success)
 
     if (!canSubmit) {
       event.preventDefault()
