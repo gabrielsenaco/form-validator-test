@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Form Validator Test</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <form novalidate>
+      <label for="email"
+        >Email
+        <input type="email" name="email" id="email" required />
+      </label>
+      <label for="country"
+        >Country
+        <input type="text" name="country" id="country" required />
+      </label>
+      <label for="zipCode"
+        >Zip Code
+        <input
+          type="text"
+          minlength="5"
+          maxlength="5"
+          name="zipCode"
+          id="zipCode"
+          required
+        />
+      </label>
+
+      <label for="password"
+        >Password
+        <input type="password" name="password" id="password" required />
+      </label>
+
+      <label for="passwordConfirm"
+        >Password Confirmation
+        <input
+          type="password"
+          name="passwordConfirm"
+          id="passwordConfirm"
+          required
+      /></label>
+
+      <label for="errors"
+        >Errors
+        <ol id="errors"></ol>
+      </label>
+      <button type="submit" name="submit" id="submit">Send</button>
+    </form>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
